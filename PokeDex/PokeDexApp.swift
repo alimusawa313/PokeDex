@@ -25,7 +25,7 @@ struct PokeDexApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView().preferredColorScheme(.dark)
         }
         .modelContainer(sharedModelContainer)
     }
