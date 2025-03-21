@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct PokeDexApp: App {
+    
+    @StateObject var router = Router()
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            User.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +27,31 @@ struct PokeDexApp: App {
 
     var body: some Scene {
         WindowGroup {
-            StartView().preferredColorScheme(.dark)
+            NavigationStack(path: $router.navPath) {
+                ContentView()
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                        case .start:
+                            StartView()
+                                .environmentObject(router)
+                        
+                        case .login:
+                            LoginView()
+                                .environmentObject(router)
+                        case .register:
+                            RegisterView()
+                                .environmentObject(router)
+                        case .home:
+                            HomeView()
+                                .environmentObject(router)
+                        case .pokemon(pokemon: let pokemon):
+                            PokemonView(pokemon: pokemon)
+                                .environmentObject(router)
+                        }
+                    }
+                    .environmentObject(router)
+            }
+            .preferredColorScheme(.dark)
         }
         .modelContainer(sharedModelContainer)
     }

@@ -45,12 +45,9 @@ struct Carousel: View {
     }
     
     func startCarousel() {
-        // Timer to move the carousel every 3 seconds
         timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
             withAnimation {
-                // Update the current index for infinite scrolling
                 currentIndex = (currentIndex + 1) % imageNames.count
-                // Center the current image in the middle of the visible area
                 offset = -CGFloat(currentIndex) * (imageWidth + cardPadding) + (carouselWidth - imageWidth) / 2
             }
         }

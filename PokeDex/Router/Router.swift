@@ -8,6 +8,8 @@ final class Router: ObservableObject {
         case start
         case login
         case register
+        case home
+        case pokemon(Pokemon)
         
     }
     

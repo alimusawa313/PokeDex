@@ -1,0 +1,51 @@
+{
+  "originHash" : "c44f12be58057734f9a75032ca3ba3bea5489971dbab63429325ed310abe8ac3",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "fxpagecontrol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/FXPageControl.git",
+      "state" : {
+        "revision" : "a94633402ba98c52f86c2a70e61ff086dec9de78",
+        "version" : "1.6.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "4c6b067f96953ee19526e49e4189403a2be21fb3",
+        "version" : "8.3.1"
+      }
+    },
+    {
+      "identity" : "mbprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jdg/MBProgressHUD.git",
+      "state" : {
+        "revision" : "bca42b801100b2b3a4eda0ba8dd33d858c780b0d",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "xlpagertabstrip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/XLPagerTabStrip.git",
+      "state" : {
+        "revision" : "211ed62aa376722cf93c429802a8b6ff66a8bd52",
+        "version" : "9.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var router: Router
     @State private var currentIndex = 0
     
     var body: some View {
@@ -31,7 +32,7 @@ struct StartView: View {
                     backgroundColor: .red,
                     textColor: .white,
                     action: {
-                        
+                        router.navigate(to: .login)
                     }
                 )
                 
@@ -41,12 +42,13 @@ struct StartView: View {
                     textColor: .red,
                     action: {
                         
+                        router.navigate(to: .register)
                     }
                 )
                 
                 
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 
